@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.ui.auth.SignInFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/easy_buy_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/galindo"
+        android:text="Welcome to EasyBuy"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05109489"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/galindo"
+        android:text="Sign in to continue"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayoutEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        android:inputType="textEmailAddress"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/orange"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:textColorHint="#C4C4C4"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="#ff914d"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:startIconDrawable="@drawable/baseline_email_24"
+        app:startIconTint="#ff914d">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="E-mail"
+            android:textStyle="italic"
+            android:inputType="textEmailAddress"
+            android:textSize="18sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayoutPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        android:inputType="textEmailAddress"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/orange"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:textColorHint="#C4C4C4"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="#ff914d"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutEmail"
+        app:startIconDrawable="@drawable/baseline_lock_24"
+        app:startIconTint="#ff914d">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Password"
+            android:textStyle="italic"
+            android:inputType="textPassword"
+            android:textSize="18sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSignIn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/orange"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutPassword"
+        app:rippleColor="#FD7676">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="25dp"
+        android:background="#80B3B3B3"
+        app:layout_constraintBottom_toBottomOf="@+id/orText"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/orText" />
+
+    <TextView
+        android:id="@+id/orText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/galindo"
+        android:text="OR"
+        android:textColor="#5B5B5E"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/view2"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toEndOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignIn">
+
+    </TextView>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="25dp"
+        android:background="#80B3B3B3"
+        app:layout_constraintBottom_toBottomOf="@+id/orText"
+        app:layout_constraintEnd_toEndOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/orText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonGoogle"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#E6FFFFFF"
+        android:fontFamily="@font/galindo"
+        android:text="Continue with Google"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/google"
+        app:iconGravity="textStart"
+        app:iconPadding="20dp"
+        app:iconSize="29sp"
+        app:iconTintMode="multiply"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/orText"
+        app:rippleColor="#E8A3A3"
+        app:strokeColor="#E6C6C6C6"
+        app:strokeWidth="0.5dp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonFacebook"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#E6FFFFFF"
+        android:fontFamily="@font/galindo"
+        android:text="Continue with Facebook"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/facebook"
+        app:iconGravity="textStart"
+        app:iconPadding="20dp"
+        app:iconSize="29sp"
+        app:iconTintMode="multiply"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGoogle"
+        app:rippleColor="#9CC9FF"
+        app:strokeColor="#E6C6C6C6"
+        app:strokeWidth="0.5dp" />
+
+    <TextView
+        android:id="@+id/textViewForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/galindo"
+        android:text="Forgot Password ?"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFacebook" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/galindo"
+        android:text="Don't have an account?"
+        android:textColor="#5B5B5E"
+
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewForgotPassword" />
+
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/galindo"
+        android:text="Sign up"
+        android:textColor="@color/orange"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
